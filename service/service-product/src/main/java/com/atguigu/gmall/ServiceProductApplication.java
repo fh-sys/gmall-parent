@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Date 2020/11/27 19:21
  * @Version V1.0
  **/
-@MapperScan("com.atguigu.gmall")
+@MapperScan("com.atguigu.gmall.product.mapper")
 @SpringBootApplication
 public class ServiceProductApplication {
 
