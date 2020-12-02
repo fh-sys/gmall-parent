@@ -54,7 +54,7 @@ public class CodeGenerator {
         // 4、包配置
         PackageConfig packageConfig = new PackageConfig();
         packageConfig.setModuleName(""); //模块名
-        packageConfig.setParent("com.atguigu.gmall");
+        packageConfig.setParent("com.atguigu.gmall.product");
         packageConfig.setController("controller");
         packageConfig.setEntity("bean");
         packageConfig.setService("service");
@@ -63,7 +63,22 @@ public class CodeGenerator {
 
         // 5、策略配置
         StrategyConfig strategy = new StrategyConfig();
-        strategy.setInclude("base_category1","base_category2","base_category3");
+        strategy.setInclude(
+                "base_attr_info",
+                "base_attr_value",
+                "base_category_view",
+                "base_sale_attr",
+                "base_trademark",
+                "sku_attr_value",
+                "sku_image",
+                "sku_info",
+                "sku_sale_attr_value",
+                "spu_image",
+                "spu_info",
+                "spu_poster",
+                "spu_sale_attr",
+                "spu_sale_attr_value"
+        );
         strategy.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
         strategy.setTablePrefix(packageConfig.getModuleName() + "_"); //生成实体时去掉表前缀
 
