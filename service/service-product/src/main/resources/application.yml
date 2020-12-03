@@ -1,11 +1,23 @@
 server:
   port: 8080
 spring:
+  application:
+    name: service-product
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.43.150:3306/gmall_product?characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://192.168.200.128:3306/gmall_product?characterEncoding=utf-8&useSSL=false
     username: root
     password: root
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.200.128:8848
+
+feign:
+  client:
+    default-config:
+      read-timeout: 600000
+      connect-timeout: 600000
 
 mybatis-plus:
   mapper-locations: classpath:mapper/*Mapper.xml

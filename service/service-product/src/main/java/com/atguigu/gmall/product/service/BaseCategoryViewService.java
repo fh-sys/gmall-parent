@@ -13,4 +13,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface BaseCategoryViewService extends IService<BaseCategoryView> {
 
+    /**
+     * 根据三级分类查询一二三级分类信息
+     * @param category3Id
+     * @return
+     */
+    BaseCategoryView getCategoryViewByCategory3Id(Long category3Id);
 }

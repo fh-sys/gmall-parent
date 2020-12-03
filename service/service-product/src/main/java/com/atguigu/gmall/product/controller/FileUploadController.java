@@ -27,7 +27,7 @@ public class FileUploadController {
 
     @PostMapping("fileUpload")
     public Result fileUpload(@RequestParam("file")MultipartFile file) throws IOException, MyException {
-        String url = "http://192.168.43.150:8080";
+        String url = "http://192.168.200.128:8080";
         String path = FileOutputStream.class.getResource("/tracker.conf").getPath();
         //初始化trackerClient
         ClientGlobal.init(path);

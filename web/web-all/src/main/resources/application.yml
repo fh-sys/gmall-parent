@@ -1,0 +1,20 @@
+server:
+  port: 8300
+spring:
+  thymeleaf:
+#    是否开启thymeleaf缓存
+    cache: false
+#   校验格式
+    mode: HTML5
+  application:
+    name: web-all
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.200.128:8848
+
+feign:
+  client:
+    default-config:
+      read-timeout: 600000
+      connect-timeout: 600000
